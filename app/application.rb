@@ -18,7 +18,8 @@ class Application
           resp.write "#{item}\n"
         end
     elsif req.path.match(/add/)
-      if @@item.include?
+    item_to_add = req.params["item"]
+      if @@item.include?item_to_add
       @@item
     elsif req.path.match(/search/)
       search_term = req.params["q"]
