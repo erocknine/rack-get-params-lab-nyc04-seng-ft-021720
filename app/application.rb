@@ -14,11 +14,11 @@ class Application
       if @@cart.empty?
         resp.write "Your cart is empty"
       else
-      @@cart.each do |item|
-          resp.write "#{item}\n"
-        end
+        @@cart.each do |item|
+        resp.write "#{item}\n"
+      end
     elsif req.path.match(/add/)
-    item_to_add = req.params["item"]
+      item_to_add = req.params["item"]
       if @@item.include?item_to_add
         @@cart << item_to_add
         resp.write "added #{item_to_add}"
