@@ -12,6 +12,9 @@ class Application
       end
     elsif req.path.match(/cart/)
       @@cart
+    elsif req.path.match(/add/)
+      if 
+      @@item
     elsif req.path.match(/search/)
       search_term = req.params["q"]
       resp.write handle_search(search_term)
